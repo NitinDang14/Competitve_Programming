@@ -7,8 +7,6 @@ once in the input string. The input string can be assumed to contain only alphab
 from collections import Counter
 def duplicate_count(text):
     # Your code goes here
-     
-    k=0
     """
     1. Convert all the text to lowercase using .lower()
     2. Break down the text into a list of characters using list(__)
@@ -18,6 +16,7 @@ def duplicate_count(text):
     5. As values for Duplicates will be greater than 1 so check for it and increase the counter k to
        get the number of duplicates
     """
+    k=0
     for key,v in Counter(list(text.lower())).items():
         if v>1:
             k+=1
