@@ -39,3 +39,10 @@ def order(sentence):
   
   #Returning the sorted String
   return sortStr
+
+
+"""
+Alternate Solution
+"""
+def order(sentence):
+    return " ".join(sorted(sentence.split(), key=lambda x: int(filter(str.isdigit, x))))
